@@ -45,6 +45,8 @@ export default {
             return {
               RequestUID: i._source.RequestUid,
               ApplicationName: i._source.Source.applicationName,
+              gwLatency: i._source.Source.gwLatency,
+              timestamp: i._source.Source['@timestamp'],
               LogID: i._id,
             };
           });

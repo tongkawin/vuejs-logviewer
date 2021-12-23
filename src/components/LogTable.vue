@@ -1,6 +1,6 @@
 <template>
   <div>
-    <b-table stacked :items="items">
+    <b-table stacked :items="items" content-class="mt-3">
     </b-table>
   </div>
 </template>
