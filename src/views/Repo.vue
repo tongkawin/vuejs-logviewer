@@ -2,7 +2,7 @@
   <div class="row d-flex justify-content-center">
     <div class="w-75">
       <br />
-      <LogTable class="table-bordered" :items="logdata"/>
+      <LogTable :items="logdata"/>
     </div>
   </div>
 </template>
@@ -29,11 +29,7 @@ export default {
         const response = data.hits.hits;
         this.logdata = response.map((i) => {
             console.log(i);
-            return {
-              RequestUID: i._source.RequestUid,
-              ApplicationName: i._source.Source,
-              LogID: i._id,
-            };
+            return i._source.Source
           });
       });
   },

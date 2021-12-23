@@ -1,6 +1,6 @@
 <template>
   <div>
-    <b-table :items="items" small bordered striped no-border-collapse responsive>
+    <b-table stacked :items="items">
     </b-table>
   </div>
 </template>
